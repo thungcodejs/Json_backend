@@ -1,0 +1,1 @@
+const mongoose = require('mongoose');const customerSchema = mongoose.Schema({    name: String,    image: String,    countInStock: {        type: Number,        required: true    }})exports.Customer = mongoose.model('Customer', customerSchema);

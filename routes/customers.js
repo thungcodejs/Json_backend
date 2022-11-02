@@ -1,0 +1,1 @@
+const {Customer} = require('../models/customer');const express = require('express');const router = express.Router();router.get(`/`, async (req, res) =>{    const customerList = await Customer.find();    if(!customerList) {        res.status(500).json({success: false})    }    res.send(customerList);})module.exports =router;
